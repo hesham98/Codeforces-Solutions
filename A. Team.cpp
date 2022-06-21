@@ -1,19 +1,19 @@
 #include <iostream>
-
 using namespace std;
 
 int main(){
-    int NumOfProblems;
-    cin >> NumOfProblems;
-    int arr[3];
-    int sum = 0;
-    for(int N = 0; N < NumOfProblems; N++){
-        for(int j = 0; j < 3; j++){
-            cin >> arr[j];
+    int numOfProblems = 0, i = 0, sum = 0, willSolve = 0;
+    int a = 0, b = 0, c = 0;
+    cin >> numOfProblems;
+    while (i < numOfProblems) {
+        cin >> a >> b >> c;
+        sum = 0;
+        i++;
+        sum = a + b + c;
+        if (sum >= 2) {
+            willSolve++;
         }
-        if((arr[0] + arr[1] + arr[2]) > 1)
-            sum ++;
     }
-    cout << sum << endl;
-    return 0;
+    cout << willSolve << endl;
+
 }
